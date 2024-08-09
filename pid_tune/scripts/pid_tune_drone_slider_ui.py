@@ -6,19 +6,19 @@ from tkinter import Scale
 import rclpy
 from rclpy.node import Node
 from rclpy.parameter import Parameter
-from pid_msg.msg import PidTune
+from pid_msg.msg import PIDTune
 
 
 class Pid_dim():
 
     def __init__(self, node, title, topic_name, queue_size):
-        self.pub_pid = node.create_publisher(PidTune, topic_name, queue_size)
-        self.pid_params = PidTune()
+        self.pub_pid = node.create_publisher(PIDTune, topic_name, queue_size)
+        self.pid_params = PIDTune()
 
         self.root = tk.Tk()
         self.root.title(title)
         self.root.attributes("-topmost", True)
-        self.root.geometry("250x210")
+        self.root.geometry("320x250")
 
         self.scale = Scale(
             self.root,

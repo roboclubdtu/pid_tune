@@ -21,7 +21,8 @@ find_package(std_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/PidTune.msg"
+  "msg/PIDTune.msg"
+  "msg/PIDError.msg"
   DEPENDENCIES std_msgs
 )
 # uncomment the following section in order to fill in
